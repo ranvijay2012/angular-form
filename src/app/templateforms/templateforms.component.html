@@ -1,0 +1,26 @@
+<p>templateforms works!</p>
+
+<form (ngSubmit)="onSubmit(empForm.value)" #empForm="ngForm">
+    <label>
+        Name :
+        <input type="text" name="empname" [(ngModel)]="emp.empname"/>
+        <br/>
+    </label>
+    <label>
+        Password : 
+        <input type="password" name="password" [(ngModel)]="emp.password"/>
+        <br/>
+    </label>
+    <label>Email :
+        <input type="email" name="empemail" [(ngModel)]="emp.empemail"/>
+        <br/>
+    </label>
+    <label>
+        <input type="submit" value="submit">
+    </label>
+
+</form>
+
+<p>
+    FormData : {{empForm.value | json}}
+</p>
